@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#img1").click(function () {
+                $("#img1").animate({
+                    left: '250px',
+                    width: '500px',
+                    height: '500px'
+                
+                });
+
+                $("#img1").fadeOut('fast');
+                $("#img2").fadeIn();   
+            });
+            $("#img2").click(function () {
+                $("#img2").animate({
+                    left: '0px',
+                    width: '200',
+                    height: '200'
+                
+                });
+                $("#img1").animate({
+                    left: '0px',
+                    width: '200',
+                    height: '200'
+                
+                });
+                $("#img2").fadeOut('fast');
+                $("#img1").fadeIn('2000');  
+               
+                
+            });
+           
+        });
+    </script>
+</head>
+<body>
+
+    <img id="img1" style="width:200px; height:200px;position:absolute;" src="rose.jpeg" />
+    <img id="img2" style="width:500px; height:500px;position:absolute; left:250px; display:none" src="pexels.jpeg" />
+
+
+</body>
+</html>
